@@ -11,7 +11,9 @@ Lenguaje de Programación: Java (versión 17+)Framework Backend: Spring Boot (Sp
 
 **Pasos de instalación y ejecución**
 
-Requisitos Java JDK 17 o superior instalado.Apache Maven 3.8+ instalado (o utilizar el wrapper ./mvnw incluido).Git instalado.PasosClonar el repositorio:git clone https://github.com/200810030-JFRS/Servicios%20Universidad.git
+Requisitos Java JDK 17 o superior instalado.Apache Maven 3.8+ instalado (o utilizar el wrapper ./mvnw incluido).Git instalado.
+Pasos:
+Clonar el repositorio:git clone https://github.com/200810030-JFRS/Servicios%20Universidad.git
 cd "Servicios Universidad"
 Compilar el proyecto:mvn clean package
 Ejecutar la aplicación:mvn spring-boot:run
@@ -19,7 +21,8 @@ Acceso:La API estará escuchando peticiones HTTP en: http://localhost:8080Consol
 
 **Variables de entorno necesarias**
 
-La aplicación utiliza la base de datos H2 en memoria, por lo que no requiere variables de entorno obligatorias para su ejecución básica.Si deseas personalizar el comportamiento predeterminado, puedes agregar o modificar las siguientes claves en el archivo src/main/resources/application.properties o pasarlas como variables de entorno al sistema:Variable / PropiedadValor por defectoDescripciónserver.port8080Puerto en el que se ejecuta el servidor Spring Boot.spring.datasource.urljdbc:h2:mem:testdbURL de conexión de la base de datos H2 en memoria.spring.datasource.driverClassNameorg.h2.DriverDriver JDBC de H2.spring.datasource.usernamesaUsuario predeterminado de la base de datos.spring.datasource.password(Vacío)Contraseña de la base de datos.spring.h2.console.enabledtrueHabilita la interfaz web de administración de H2.
+La aplicación utiliza la base de datos H2 en memoria, por lo que no requiere variables de entorno obligatorias para su ejecución básica.
+Si deseas personalizar el comportamiento predeterminado, puedes agregar o modificar las siguientes claves en el archivo src/main/resources/application.properties o pasarlas como variables de entorno al sistema:Variable / PropiedadValor por defectoDescripciónserver.port8080Puerto en el que se ejecuta el servidor Spring Boot.spring.datasource.urljdbc:h2:mem:testdbURL de conexión de la base de datos H2 en memoria.spring.datasource.driverClassNameorg.h2.DriverDriver JDBC de H2.spring.datasource.usernamesaUsuario predeterminado de la base de datos.spring.datasource.password(Vacío)Contraseña de la base de datos.spring.h2.console.enabledtrueHabilita la interfaz web de administración de H2.
 
 **Listado de endpoints Módulo**
 
