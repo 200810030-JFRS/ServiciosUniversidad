@@ -27,6 +27,8 @@ Sigue estos pasos para clonar y ejecutar el proyecto en tu entorno local:
    spring.datasource.url=jdbc:h2:mem:testdb
    spring.h2.console.enabled=true
 
+---
+
 ## 4. Listado de endpoints
 
 Módulo de Estudiantes
