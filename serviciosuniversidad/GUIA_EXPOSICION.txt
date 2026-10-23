@@ -1,0 +1,29 @@
+SERVICIOS UNIVERSIDAD - GUIA SENCILLA DE EXPOSICION
+
+Se conservaron los 8 archivos Java existentes. Solo se modificaron:
+- EstudianteService.java: registro, verificacion de inscripcion y las cuatro operaciones del tramite.
+- EstudianteController.java: rutas para llamar esas operaciones desde Postman.
+
+EJECUCION:
+1. Abrir la carpeta serviciosuniversidad en VS Code.
+2. Desde la carpeta que contiene pom.xml ejecutar: .\mvnw.cmd spring-boot:run
+3. Base H2 en memoria: al reiniciar la aplicacion se pierden los registros.
+
+POST http://localhost:8080/api/v1/estudiantes
+Body raw JSON: {"matricula":"202600001","nombre":"Juan Perez","correo":"juan@universidad.edu","activo":true}
+GET http://localhost:8080/api/v1/estudiantes/202600001/inscripcion
+Respuesta esperada: true
+
+FLUJO DE CONSTANCIA (cada una es POST, Body vacio):
+1. /api/v1/estudiantes/202600001/constancia/solicitar
+2. /api/v1/estudiantes/202600001/constancia/pago
+3. /api/v1/estudiantes/202600001/constancia/pdf
+4. /api/v1/estudiantes/202600001/constancia/correo
+
+PAGO, PDF Y CORREO SON SIMULADOS: no cobran, no crean PDF, no envian email.
+Se debe seguir el orden indicado. Si se salta un paso responde HTTP 400.
+NO se agregaron clases Java ni modificaron los servicios de libros.
+
+EXPLICACION PARA EL PROFESOR:
+Controller: recibe la peticion HTTP. Service: comprueba inscripcion y etapas del tramite.
+Repository: busca/guarda estudiantes. Model: define los datos del estudiante.
